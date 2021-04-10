@@ -37,7 +37,7 @@ class Team:
     _hero_file_path = None        # holds path to txt file containing hero & class data
     _possible_heroes = None       # initialized when first class instance is created
     _team_size = 3                # should only be changed by the set_team_size class method
-    _allow_special_class = True   # should only be changed by the allow_special class method
+    _allow_special_class = True   # should only be changed by the disallow_special class method
 
     @classmethod
     def get_team_size(cls):
