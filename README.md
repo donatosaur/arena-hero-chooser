@@ -1,6 +1,7 @@
 # Arena: The Contest Hero Chooser
 A random PvP team generator for the board game Arena: The Contest (https://arenathecontest.com/)
 
+## FAQ
 ### How do I use it?
 Just run it in a python shell! There's a simple CLI included in the script.
 
@@ -13,7 +14,7 @@ If you want to use different/custom heroes/classes, you'll need to add them to t
   hero2 name, hero2 class
   ...
 
-### To-Do
+## To-Do
 - [x] add a CLI interface demo when run as a script
 - [ ] add the ability to pass the hero file as a command line argument
 - [ ] add a gui
