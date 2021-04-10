@@ -1,6 +1,18 @@
-# Copyright 2021 Donato Quartuccia
+# Arena Hero Chooser is a random PvP team generator for the board game Arena: The Contest (see https://arenathecontest.com/)
+# Copyright (C) 2021 Donato Quartuccia
 #
-# Licensed under GNU GENERAL PUBLIC LICENSE v 3.0
+#     This program is free software: you can redistribute it and/or modify
+#     it under the terms of the GNU General Public License as published by
+#     the Free Software Foundation, either version 3 of the License, or
+#     (at your option) any later version.
+#
+#     This program is distributed in the hope that it will be useful,
+#     but WITHOUT ANY WARRANTY; without even the implied warranty of
+#     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#     GNU General Public License for more details.
+#
+#     You should have received a copy of the GNU General Public License
+#     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
 # The creator of this program is not affiliated with Dragori Games or Arena: The Contest.
 # All trademarks and copyrights are the property of their respective owners.
