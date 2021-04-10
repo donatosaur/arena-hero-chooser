@@ -1,4 +1,4 @@
-# Arena Hero Chooser is a random PvP team generator for the board game Arena: The Contest (see https://arenathecontest.com/)
+# Arena: The Contest Hero Chooser is a random PvP team generator for the board game Arena: The Contest (see https://arenathecontest.com/)
 # Copyright (C) 2021 Donato Quartuccia
 #
 #     This program is free software: you can redistribute it and/or modify
@@ -21,14 +21,17 @@ import random
 from os import path
 
 
-class PathNotSetError(OSError):
+class PathNotSetError(Exception):
+    """
+    Raised when Team._hero_file_path is not set
+    """
     pass
 
 
 class Team:
     """
     A team belonging to a player. May have 3 or 4 heroes.
-    Teams are compared based on the value of their rolls and share the same pool of possible heroes.
+    Teams are compared based on the value of their rolls and share a pool of possible heroes.
     """
     # Class variables:
     _hero_file_path = None        # holds path to txt file containing hero & class data
@@ -106,7 +109,7 @@ class Team:
         Sets class variable team_size to 3 or 4.
 
         :param int team_size: Number of heroes to place on each team. Must be 3 or 4.
-        :raises: ValueError if team_size is not 3 or 4
+        :raises ValueError: if team_size is not 3 or 4
         """
 
         if cls._team_size == 3 or cls._team_size == 4:
@@ -124,7 +127,7 @@ class Team:
             - *(optional)* cls.set_team_size must have been called to set the team size to 4 (default is 3)
             - *(optional)* cls.disallow_special must have been called to exclude the special class (included by default)
 
-        :param str team_name: str, a name for the Team
+        :param str team_name: a name for the Team
         """
 
         # if this is the first time any Team has been created, initialize the heroes database
@@ -139,7 +142,7 @@ class Team:
         self._name = team_name
         self._roll = random.randint(1, 20)  # roll a d20
         self._possible_classes = list(self._possible_heroes.keys())
-        self._heroes = []  # len(self.heroes) should never exceed cls.team_size
+        self._heroes = []  # len(self._heroes) should never exceed cls.team_size
 
     def get_name(self):
         return self._name
