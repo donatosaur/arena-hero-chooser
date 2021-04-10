@@ -1,0 +1,29 @@
+Count Blake the Vampire, Brute
+Katar the Barbarian, Brute
+Morlogh the Minotaur, Brute
+Sedrik the Werewolf, Brute
+Ascaran the Archangel, Bruiser
+Vanarus the Demon, Bruiser
+Ohris the Monk, Bruiser
+Renkyr the Dragon Avenger, Bruiser
+Garion the Rogue, Tactician
+Liana the Pirate, Tactician
+Myr the Assassin, Tactician
+Rokaru the Samurai, Tactician
+Rurik the Warrior, Tank
+Jorana the Amazon, Tank
+Nakral the Death Knight, Tank
+Sir Erick the Paladin, Tank
+Taram the Cleric, Healer
+Thalia the Druid, Healer
+Uster the Necromancer, Healer
+Jade the Bard, Healer
+Niary the Hunter, Shooter
+Avelum the Wizard, Shooter
+Juliet the Ice Sorcerer, Shooter
+Zanac the Fire Sorcerer, Shooter
+Catharina the Witch, Controller
+Zund the Illusionist, Controller
+Zafara the Fallen Angel, Controller
+Elarine the Telepath, Controller
+The Faceless Emperor, Special
