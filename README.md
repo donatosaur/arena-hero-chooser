@@ -1,7 +1,7 @@
 # Arena: The Contest Hero Chooser
 A random PvP team generator for the board game Arena: The Contest (https://arenathecontest.com/)
 
-## FAQ
+## Instructions
 ### How do I use it?
 Just run it in a python shell! There's a simple CLI included in the script.
 
