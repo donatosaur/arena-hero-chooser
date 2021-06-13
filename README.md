@@ -15,7 +15,7 @@ If you want to use different/custom heroes/classes, you'll need to add them to t
   ...
 
 ## To-Do
-- [x] add a CLI interface demo when run as a script
+- [x] add a CLI demo when run as a script
 - [ ] add the ability to pass the hero file as a command line argument
 - [ ] add a GUI
 - [ ] add Tanares Adventures heroes
