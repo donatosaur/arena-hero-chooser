@@ -1,4 +1,4 @@
-# Arena: The Contest Hero Chooser is a random PvP team generator for the board game Arena: The Contest (see https://arenathecontest.com/)
+# Arena: The Contest Hero Chooser is a random PvP team generator for the board game Arena: The Contest
 # Copyright (C) 2021 Donato Quartuccia
 #
 #     This program is free software: you can redistribute it and/or modify
@@ -14,8 +14,11 @@
 #     You should have received a copy of the GNU General Public License
 #     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 #
-# The creator of this program is not affiliated with Dragori Games or Arena: The Contest.
+# The creator of this program is not affiliated with Dragori Games or Arena: The Contest (https://arenathecontest.com/)
 # All trademarks and copyrights are the property of their respective owners.
+#
+# Modified:    2021-06-13
+# Description: A script that will randomly generate two PvP teams for Arena: The Contest.
 
 import random
 from os import path
@@ -40,7 +43,7 @@ class Team:
     _allow_special_class = True   # should only be changed by the disallow_special class method
 
     @classmethod
-    def get_team_size(cls):
+    def get_team_size(cls) -> int:
         return cls._team_size
 
     @classmethod
@@ -100,8 +103,8 @@ class Team:
         """
         if cls._allow_special_class:
             cls._allow_special_class = False      # prevent special class from being added to possible_heroes
-        if cls._possible_heroes and 'Special' in cls._possible_heroes:
-            del(cls._possible_heroes['Special'])  # remove special class from possible_heroes if it was already added
+        if cls._possible_heroes and "Special" in cls._possible_heroes:
+            del(cls._possible_heroes["Special"])  # remove special class from possible_heroes if it was already added
 
     @classmethod
     def set_team_size(cls, team_size):
@@ -115,7 +118,7 @@ class Team:
         if cls._team_size == 3 or cls._team_size == 4:
             cls._team_size = team_size
         else:
-            raise ValueError("set_team_size called with bad value")
+            raise ValueError("team_size must be 3 or 4")
 
     def __init__(self, team_name):
         """
@@ -136,23 +139,23 @@ class Team:
 
         # remove the special class from consideration if disallow_special() was previously called and
         # the special class is somehow still among the possible_heroes to be chosen
-        if not self._allow_special_class and 'Special' in self._possible_heroes:
-            del(self._possible_heroes['Special'])
+        if not self._allow_special_class and "Special" in self._possible_heroes:
+            del(self._possible_heroes["Special"])
 
         self._name = team_name
         self._roll = random.randint(1, 20)  # roll a d20
         self._possible_classes = list(self._possible_heroes.keys())
         self._heroes = []  # len(self._heroes) should never exceed cls.team_size
 
-    def get_name(self):
+    def get_name(self) -> str:
         return self._name
 
-    def get_roll(self):
+    def get_roll(self) -> int:
         return self._roll
 
     def print_roll(self):
-        a_or_an = "an" if self._roll in [8, 11, 18] else "a"
-        print(self._name, "rolled", a_or_an, self._roll)
+        a_or_an = "an" if self._roll in {8, 11, 18} else 'a'
+        print(f"{self._name} rolled {a_or_an} {self._roll}")
 
     def reroll(self):
         """
@@ -197,10 +200,9 @@ class Team:
         return self._name + "\'s team:\n" + '\n'.join(self._heroes)
 
     def __repr__(self):
-        return "Team(_possible_heroes={}, _team_size={}, _allow_special_class={}, _name={}," + \
-               "_roll = {} _possible_classes={}, _heroes={})"\
-                .format(self._possible_heroes, self._team_size, self._allow_special_class,
-                        self._name, self._roll, self._possible_classes, self._heroes)
+        return f"Team(_possible_heroes={self._possible_heroes}, _team_size={self._team_size}, " \
+               f"_allow_special_class={self._allow_special_class}, _name={self._name}, _roll = {self._roll} " \
+               f"_possible_classes={self._possible_classes}, _heroes={self._heroes})"
 
 
 if __name__ == '__main__':
